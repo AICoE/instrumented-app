@@ -1,7 +1,7 @@
-DOCKER_ID_USER = simonpasquier
+DOCKER_ID_USER = jkarasek
 BUILD_DATE := $(shell date -u +%Y-%m-%dT%H-%M-%SZ)
 COMMIT_ID := $(shell git log --pretty=format:'%h' -n 1)
-GO_FLAGS := -ldflags "-X main.buildDate=$(BUILD_DATE) -X main.commitId=$(COMMIT_ID)"
+GO_FLAGS := -a -ldflags "-w -X main.buildDate=$(BUILD_DATE) -X main.commitId=$(COMMIT_ID)"
 
 build:
 	go build $(GO_FLAGS) .
