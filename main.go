@@ -162,7 +162,7 @@ func (s *Server) healthyHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	var listen = kingpin.Flag("listen", "Listen address").Default("127.0.0.1:8080").String()
+	var listen = kingpin.Flag("listen", "Listen address").Default("0.0.0.0:8080").String()
 	var listenm = kingpin.Flag("listen-metrics", "Listen address for exposing metrics (default to 'listen' if blank)").Default("").String()
 	var auth = kingpin.Flag("basic-auth", "Basic authentication (eg <user>:<password>)").Default("").String()
 	kingpin.Parse()
