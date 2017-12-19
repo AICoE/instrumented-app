@@ -1,0 +1,16 @@
+sudo: required
+
+language: go
+go:
+  - 1.9.2
+
+services:
+  - docker
+
+script:
+  - make build
+
+after_success:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker build -t durandom/instrumented-app .
+  - docker push durandom/instrumented-app
