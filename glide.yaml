@@ -1,0 +1,39 @@
+package: .
+import:
+- package: github.com/alecthomas/template
+  version: a0175ee3bccc567396460bf5acd36800cb10c49c
+  subpackages:
+  - parse
+- package: github.com/alecthomas/units
+  version: 2efee857e7cfd4f3d0138cc3cbb1b4966962b93a
+- package: github.com/beorn7/perks
+  version: 3ac7bf7a47d159a033b107610db8a1b6575507a4
+  subpackages:
+  - quantile
+- package: github.com/golang/protobuf
+  version: 552c7b9542c194800fd493123b3798ef0a832032
+  subpackages:
+  - proto
+- package: github.com/matttproud/golang_protobuf_extensions
+  version: d0c3fe89de86839aecf2e0579c40ba3bb336a453
+  subpackages:
+  - pbutil
+- package: github.com/prometheus/client_golang
+  version: 1cdba8fdde81f444626530cce66e138d2f68ae1c
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
+- package: github.com/prometheus/client_model
+  version: 6f3806018612930941127f2a7c6c453ba2c527d2
+  subpackages:
+  - go
+- package: github.com/prometheus/common
+  version: 2e54d0b93cba2fd133edc32211dcc32c06ef72ca
+  subpackages:
+  - expfmt
+  - internal/bitbucket.org/ww/goautoneg
+  - model
+- package: github.com/prometheus/procfs
+  version: 406e5b7bfd8201a36e2bb5f7bdae0b03380c2ce8
+- package: gopkg.in/alecthomas/kingpin.v2
+  version: ^2.2.5
