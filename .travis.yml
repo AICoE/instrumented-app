@@ -7,6 +7,9 @@ go:
 services:
   - docker
 
+install:
+  - go get -v github.com/Masterminds/glide
+
 script:
   - make buildstatic
 

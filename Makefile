@@ -4,14 +4,14 @@ COMMIT_ID := $(shell git log --pretty=format:'%h' -n 1)
 GO_FLAGS := -a -ldflags "-w -X main.buildDate=$(BUILD_DATE) -X main.commitId=$(COMMIT_ID)"
 
 build:
-	go build $(GO_FLAGS) .
+	go build $(GO_FLAGS) -o instrumented_app .
 
 assemble:
 	glide up -v .
 	go build -v -o main
 
 buildstatic:
-	go build $(GO_FLAGS) -tags netgo .
+	go build $(GO_FLAGS) -tags netgo -o instrumented_app .
 
 docker: buildstatic
 	@echo "Updating the local Docker image"
