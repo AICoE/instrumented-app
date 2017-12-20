@@ -27,3 +27,6 @@ Flags:
 
 ```
 
+## Requirements
+
+Build requirements: [glide.sh](http://glide.sh)

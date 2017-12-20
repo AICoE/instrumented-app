@@ -161,6 +161,10 @@ func (s *Server) healthyHandler(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "Healthy")
 }
 
+func (s *Server) rootHandler(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "root")
+}
+
 func main() {
 	var listen = kingpin.Flag("listen", "Listen address").Default("0.0.0.0:8080").String()
 	var listenm = kingpin.Flag("listen-metrics", "Listen address for exposing metrics (default to 'listen' if blank)").Default("").String()
@@ -181,6 +185,7 @@ func main() {
 		hdFailures.WithLabelValues(d)
 	}
 
+	http.Handle("/", http.HandlerFunc(s.rootHandler))
 	http.Handle("/-/healthy", http.HandlerFunc(s.readyHandler))
 	http.Handle("/-/ready", http.HandlerFunc(s.healthyHandler))
 	http.Handle("/cpu",
