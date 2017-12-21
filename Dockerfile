@@ -1,7 +1,7 @@
 FROM scratch
 
-COPY ./instrumented_app /instrumented_app
+COPY ./instrumented-app /instrumented-app
 
 EXPOSE 8080
 
-CMD ["/instrumented_app"]
+CMD ["/instrumented-app"]

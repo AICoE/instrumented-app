@@ -16,8 +16,8 @@ curl http://localhost:8080/hd -d sda
 ## Usage
 
 ```
-$ ./instrumented_app --help
-usage: instrumented_app [<flags>]
+$ ./instrumented-app --help
+usage: instrumented-app [<flags>]
 
 Flags:
   --help                     Show context-sensitive help (also try --help-long and --help-man).

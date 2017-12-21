@@ -16,5 +16,5 @@ script:
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker build -t aicoe/instrumented-app .
-  - docker push aicoe/instrumented-app
+  - docker build -t aicoe/instrumented-app-go .
+  - docker push aicoe/instrumented-app-go
