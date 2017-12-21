@@ -16,5 +16,5 @@ script:
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker build -t durandom/instrumented-app .
-  - docker push durandom/instrumented-app
+  - docker build -t aicoe/instrumented-app .
+  - docker push aicoe/instrumented-app
